@@ -9,7 +9,8 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+<bean name="template" class="org.springframework.orm.hibernate5.HibernateTemplate"></bean>
 
-	
+<bean class="com.spring.orm.SpringOrm.entities.StudentDao" name="studentdao" p:template-ref="template"/>	
 
 </beans>
